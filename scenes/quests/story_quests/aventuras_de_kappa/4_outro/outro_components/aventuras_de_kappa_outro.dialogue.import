@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cxmarm824nebu"
+path="res://.godot/imported/aventuras_de_kappa_outro.dialogue-dcedaa2c790eeb75254cc0c0b6dd3de3.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/aventuras_de_kappa/4_outro/outro_components/aventuras_de_kappa_outro.dialogue"
+dest_files=["res://.godot/imported/aventuras_de_kappa_outro.dialogue-dcedaa2c790eeb75254cc0c0b6dd3de3.tres"]
+
+[params]
+
+defaults=true

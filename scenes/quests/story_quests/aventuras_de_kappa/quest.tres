@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=2 format=3 uid="uid://c32an42xk8ks8"]
+
+[ext_resource type="Script" uid="uid://dts1hwdy3phin" path="res://scenes/menus/storybook/components/quest.gd" id="1_ik00l"]
+
+[resource]
+script = ExtResource("1_ik00l")
+title = "aventuras_de_kappa"
+description = "Aventuras de un Kappa"
+first_scene = "uid://dwwivnsn2g4ir"
+metadata/_custom_type_script = "uid://dts1hwdy3phin"

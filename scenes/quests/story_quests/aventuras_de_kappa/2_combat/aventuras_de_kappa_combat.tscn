@@ -1,0 +1,110 @@
+[gd_scene load_steps=15 format=4 uid="uid://bscygdovj84md"]
+
+[ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="1_i0ewc"]
+[ext_resource type="Resource" uid="uid://drf7yucdg05n" path="res://scenes/quests/story_quests/aventuras_de_kappa/2_combat/combat_components/aventuras_de_kappa_combat.dialogue" id="2_h4p37"]
+[ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="3_8q22m"]
+[ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="4_07le4"]
+[ext_resource type="SpriteFrames" uid="uid://dld8o52ncd16g" path="res://scenes/quests/story_quests/aventuras_de_kappa/player_components/aventuras_de_kappa_player.tres" id="5_07ckf"]
+[ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/throwing_enemy/throwing_enemy.tscn" id="6_5qcp8"]
+[ext_resource type="SpriteFrames" uid="uid://cwas3t53nvcra" path="res://scenes/quests/story_quests/aventuras_de_kappa/2_combat/combat_components/aventuras_de_kappa_throwing_enemy.tres" id="7_nqus5"]
+[ext_resource type="SpriteFrames" uid="uid://yyw4ntkdkape" path="res://scenes/quests/story_quests/aventuras_de_kappa/2_combat/combat_components/aventuras_de_kappa_projectile_spriteframes.tres" id="8_amh8x"]
+[ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/game_elements/props/filling_barrel/filling_barrel.tscn" id="9_5gwf6"]
+[ext_resource type="SpriteFrames" uid="uid://dy28nqx8oh645" path="res://scenes/quests/story_quests/aventuras_de_kappa/2_combat/combat_components/aventuras_de_kappa_target_spriteframes.tres" id="10_drl8v"]
+[ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="11_etuui"]
+[ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="12_otad5"]
+[ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="13_y2y1p"]
+
+[sub_resource type="Resource" id="Resource_q361l"]
+script = ExtResource("12_otad5")
+type = 1
+metadata/_custom_type_script = "uid://bgmwplmj3bfls"
+
+[node name="Combat" type="Node2D"]
+y_sort_enabled = true
+
+[node name="FillGameLogic" type="Node" parent="."]
+script = ExtResource("1_i0ewc")
+intro_dialogue = ExtResource("2_h4p37")
+metadata/_custom_type_script = "uid://cp54mgi54nywo"
+
+[node name="TileMapLayers" type="Node2D" parent="."]
+
+[node name="Grass" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAANAAcAAQABAAEAAAANAAYAAQABAAEAAAANAAUAAQABAAEAAAANAAQAAQABAAEAAAANAAMAAQABAAEAAAANAAIAAQABAAEAAAANAAEAAQABAAEAAAAMAAcAAQABAAEAAAAMAAYAAQABAAEAAAAMAAUAAQABAAEAAAAMAAQAAQABAAEAAAAMAAMAAQABAAEAAAAMAAIAAQABAAEAAAAMAAEAAQABAAEAAAALAAcAAQABAAEAAAALAAYAAQABAAEAAAALAAUAAQABAAEAAAALAAQAAQABAAEAAAALAAMAAQABAAEAAAALAAIAAQABAAEAAAALAAEAAQABAAEAAAAKAAcAAQABAAEAAAAKAAYAAQABAAEAAAAKAAUAAQABAAEAAAAKAAQAAQABAAEAAAAKAAMAAQABAAEAAAAKAAIAAQABAAEAAAAKAAEAAQABAAEAAAAJAAcAAQABAAEAAAAJAAYAAQABAAEAAAAJAAUAAQABAAEAAAAJAAQAAQABAAEAAAAJAAMAAQABAAEAAAAJAAIAAQABAAEAAAAJAAEAAQABAAEAAAAIAAcAAQABAAEAAAAIAAYAAQABAAEAAAAIAAUAAQABAAEAAAAIAAQAAQABAAEAAAAIAAMAAQABAAEAAAAIAAIAAQABAAEAAAAIAAEAAQABAAEAAAAHAAcAAQABAAEAAAAHAAYAAQABAAEAAAAHAAUAAQABAAEAAAAHAAQAAQABAAEAAAAHAAMAAQABAAEAAAAHAAIAAQABAAEAAAAHAAEAAQABAAEAAAAGAAcAAQABAAEAAAAGAAYAAQABAAEAAAAGAAUAAQABAAEAAAAGAAQAAQABAAEAAAAGAAMAAQABAAEAAAAGAAIAAQABAAEAAAAFAAcAAQABAAEAAAAFAAYAAQABAAEAAAAFAAUAAQABAAEAAAAFAAQAAQABAAEAAAAFAAMAAQABAAEAAAAFAAIAAQABAAEAAAAFAAEAAQABAAEAAAAEAAcAAQABAAEAAAAEAAYAAQABAAEAAAAEAAUAAQABAAEAAAAEAAQAAQABAAEAAAAEAAMAAQABAAEAAAAEAAIAAQABAAEAAAAEAAEAAQABAAEAAAADAAcAAQABAAEAAAADAAYAAQABAAEAAAADAAUAAQABAAEAAAADAAQAAQABAAEAAAADAAMAAQABAAEAAAADAAIAAQABAAEAAAADAAEAAQABAAEAAAACAAcAAQABAAEAAAACAAYAAQABAAEAAAACAAUAAQABAAEAAAACAAMAAQABAAEAAAACAAIAAQABAAEAAAACAAEAAQABAAEAAAABAAcAAQABAAEAAAABAAYAAQABAAEAAAABAAUAAQABAAEAAAABAAMAAQABAAEAAAABAAIAAQABAAEAAAABAAEAAQABAAEAAAACAAQAAQABAAEAAAABAAQAAQABAAEAAAAAAAQAAQABAAEAAAAAAAUAAQABAAEAAAAAAAYAAQABAAEAAAAAAAcAAQABAAEAAAAGAAAAAQABAAEAAAAGAAEAAQABAAEAAAAHAAAAAQABAAEAAAAFAAAAAQABAAEAAAAIAAAAAQABAAEAAAAJAAAAAQABAAEAAAALAAAAAQABAAEAAAAMAAAAAQABAAEAAAAKAAAAAQABAAEAAAANAAAAAQABAAEAAAAEAAAAAQABAAEAAAADAAAAAQABAAEAAAACAAAAAQABAAEAAAABAAAAAQABAAEAAAAAAAAAAQABAAEAAAAAAAEAAQABAAEAAAAAAAIAAQABAAEAAAAAAAMAAQABAAEAAAAAAAgAAQABAAEAAAABAAgAAQABAAEAAAACAAgAAQABAAEAAAADAAgAAQABAAEAAAAEAAgAAQABAAEAAAAFAAgAAQABAAEAAAAGAAgAAQABAAEAAAAHAAgAAQABAAEAAAAIAAgAAQABAAEAAAAJAAgAAQABAAEAAAAKAAgAAQABAAEAAAAMAAgAAQABAAEAAAALAAgAAQABAAEAAAANAAgAAQABAAEAAAAOAAgAAQABAAEAAAAOAAcAAQABAAEAAAAOAAYAAQABAAEAAAAOAAUAAQABAAEAAAAOAAQAAQABAAEAAAAOAAMAAQABAAEAAAAOAAIAAQABAAEAAAAOAAEAAQABAAEAAAAOAAAAAQABAAEAAAA=")
+tile_set = ExtResource("3_8q22m")
+
+[node name="Stones" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAAGAAkABAABAAUAAAAHAAkABAABAAUAAAAIAAkABAABAAUAAAAJAAkABAABAAUAAAAKAAkABAABAAUAAAALAAkABAABAAUAAAAMAAkABAABAAUAAAANAAkABAABAAUAAAAOAAkABAABAAUAAAAGAAgABAABAAQAAAAHAAgABAABAAQAAAAIAAgABAABAAQAAAAJAAgABAABAAQAAAAKAAgABAABAAQAAAALAAgABAABAAQAAAAMAAgABAABAAQAAAANAAgABAABAAQAAAAOAAgABAABAAQAAAAAAAEABAACAAEAAAABAAEABAABAAMAAAACAAEABAABAAUAAAACAAAABAABAAQAAAABAAAABAABAAIAAAAAAAAABAABAAEAAAADAAAABAABAAIAAAAFAAAABAACAAIAAAAEAAAABAABAAEAAAAEAAEABAABAAMAAAAFAAEABAABAAUAAAADAAEABAABAAUAAAANAAcABAAAAAEAAAAOAAcABAABAAEAAAANAAYABAAAAAAAAAAOAAYABAABAAEAAAAOAAUABAAAAAEAAAAOAAMABAAAAAEAAAAOAAIABAABAAEAAAANAAEABAAAAAEAAAANAAAABAABAAAAAAAOAAAABAABAAAAAAAOAAEABAABAAEAAAAOAAQABAAAAAEAAAAMAAAABAABAAAAAAALAAAABAABAAAAAAAKAAAABAABAAAAAAAJAAAABAABAAAAAAAIAAAABAABAAAAAAAHAAAABAAAAAEAAAANAAIABAAAAAIAAAANAAMABAAAAAMAAAAHAAEABAABAAMAAAAIAAEABAABAAUAAAAKAAEABAABAAUAAAALAAEABAABAAUAAAAJAAEABAABAAMAAAAMAAEABAABAAMAAAAGAAAABAABAAIAAAAGAAEABAABAAMAAAAAAAkABAABAAUAAAABAAkABAABAAUAAAACAAkABAABAAUAAAADAAkABAABAAUAAAAEAAkABAABAAUAAAAFAAkABAABAAUAAAAAAAgABAABAAQAAAABAAgABAABAAQAAAACAAgABAABAAQAAAADAAgABAABAAQAAAAEAAgABAABAAQAAAAFAAgABAABAAQAAAAAAAIABAACAAEAAAAAAAMABAACAAEAAAAAAAQABAACAAEAAAAAAAcABAACAAEAAAAAAAYABAACAAEAAAAAAAUABAACAAEAAAA=")
+tile_set = ExtResource("3_8q22m")
+
+[node name="OnTheGround" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="OnTheGround" instance=ExtResource("4_07le4")]
+position = Vector2(348, 335)
+sprite_frames = ExtResource("5_07ckf")
+
+[node name="ThrowingNPC" parent="OnTheGround" instance=ExtResource("6_5qcp8")]
+position = Vector2(857, 300)
+sprite_frames = ExtResource("7_nqus5")
+projectile_sprite_frames = ExtResource("8_amh8x")
+
+[node name="Target" parent="OnTheGround" instance=ExtResource("9_5gwf6")]
+position = Vector2(502, 164)
+sprite_frames = ExtResource("10_drl8v")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target2" parent="OnTheGround" instance=ExtResource("9_5gwf6")]
+position = Vector2(758, 164)
+sprite_frames = ExtResource("10_drl8v")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target3" parent="OnTheGround" instance=ExtResource("9_5gwf6")]
+position = Vector2(761, 497)
+sprite_frames = ExtResource("10_drl8v")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target4" parent="OnTheGround" instance=ExtResource("9_5gwf6")]
+position = Vector2(632, 497)
+sprite_frames = ExtResource("10_drl8v")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target5" parent="OnTheGround" instance=ExtResource("9_5gwf6")]
+position = Vector2(633, 164)
+sprite_frames = ExtResource("10_drl8v")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target6" parent="OnTheGround" instance=ExtResource("9_5gwf6")]
+position = Vector2(501, 497)
+sprite_frames = ExtResource("10_drl8v")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="CollectibleItem" parent="OnTheGround" instance=ExtResource("11_etuui")]
+unique_name_in_owner = true
+position = Vector2(868, 303)
+revealed = false
+next_scene = "uid://bv83mtl7n8fe7"
+item = SubResource("Resource_q361l")
+collected_dialogue = ExtResource("2_h4p37")
+dialogue_title = &"well_done"
+
+[node name="ScreenOverlay" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("13_y2y1p")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.333, 1.333)
+limit_left = 0
+limit_top = 0
+limit_right = 2048
+limit_bottom = 2048
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[connection signal="goal_reached" from="FillGameLogic" to="OnTheGround/CollectibleItem" method="reveal"]

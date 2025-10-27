@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://drf7yucdg05n"
+path="res://.godot/imported/aventuras_de_kappa_combat.dialogue-d7dd5c5570ecf290af5cc60e63b9175c.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/aventuras_de_kappa/2_combat/combat_components/aventuras_de_kappa_combat.dialogue"
+dest_files=["res://.godot/imported/aventuras_de_kappa_combat.dialogue-d7dd5c5570ecf290af5cc60e63b9175c.tres"]
+
+[params]
+
+defaults=true

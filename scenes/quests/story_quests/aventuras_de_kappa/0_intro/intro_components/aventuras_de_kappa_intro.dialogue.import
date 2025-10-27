@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cqgogrd8nfxgu"
+path="res://.godot/imported/aventuras_de_kappa_intro.dialogue-40d83b1faa058b1c80e23b0db471b1e5.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/aventuras_de_kappa/0_intro/intro_components/aventuras_de_kappa_intro.dialogue"
+dest_files=["res://.godot/imported/aventuras_de_kappa_intro.dialogue-40d83b1faa058b1c80e23b0db471b1e5.tres"]
+
+[params]
+
+defaults=true
