@@ -1,0 +1,40 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dy28nqx8oh645"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nqqql"]
+load_path = "res://.godot/imported/aventuras_de_un_kapp_target.png-9fbc92739ed7e93d5a3cbfd92ebf0102.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kf7lf"]
+atlas = SubResource("CompressedTexture2D_nqqql")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0cj1"]
+atlas = SubResource("CompressedTexture2D_nqqql")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he37w"]
+atlas = SubResource("CompressedTexture2D_nqqql")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v1rc"]
+atlas = SubResource("CompressedTexture2D_nqqql")
+region = Rect2(0, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kf7lf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0cj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he37w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v1rc")
+}],
+"loop": true,
+"name": &"filling",
+"speed": 10.0
+}]

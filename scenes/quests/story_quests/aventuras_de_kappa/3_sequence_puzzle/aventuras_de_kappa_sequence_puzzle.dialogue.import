@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ig2q4mn4qhph"
+path="res://.godot/imported/aventuras_de_kappa_sequence_puzzle.dialogue-32cea775b2a2d762218548fd976dd2cf.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/aventuras_de_kappa/3_sequence_puzzle/aventuras_de_kappa_sequence_puzzle.dialogue"
+dest_files=["res://.godot/imported/aventuras_de_kappa_sequence_puzzle.dialogue-32cea775b2a2d762218548fd976dd2cf.tres"]
+
+[params]
+
+defaults=true

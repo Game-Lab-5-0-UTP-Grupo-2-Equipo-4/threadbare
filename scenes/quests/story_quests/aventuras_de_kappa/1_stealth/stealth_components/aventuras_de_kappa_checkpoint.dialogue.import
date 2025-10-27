@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b2d0k3hgi1ceu"
+path="res://.godot/imported/aventuras_de_kappa_checkpoint.dialogue-945ebefe2e723efd3a0ca8c1214fc4c3.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/aventuras_de_kappa/1_stealth/stealth_components/aventuras_de_kappa_checkpoint.dialogue"
+dest_files=["res://.godot/imported/aventuras_de_kappa_checkpoint.dialogue-945ebefe2e723efd3a0ca8c1214fc4c3.tres"]
+
+[params]
+
+defaults=true

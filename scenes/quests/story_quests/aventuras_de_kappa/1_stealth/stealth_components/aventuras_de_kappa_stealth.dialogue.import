@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cxv6gocxfu5y8"
+path="res://.godot/imported/aventuras_de_kappa_stealth.dialogue-bb2705bd6d04e6b2fcc5c2866666a375.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/aventuras_de_kappa/1_stealth/stealth_components/aventuras_de_kappa_stealth.dialogue"
+dest_files=["res://.godot/imported/aventuras_de_kappa_stealth.dialogue-bb2705bd6d04e6b2fcc5c2866666a375.tres"]
+
+[params]
+
+defaults=true
