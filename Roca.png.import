@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bniijl3n4hqhe"
-path="res://.godot/imported/story_quest_contradi_guard_enemy_idle.png-e3498cef848dcc22630e565ebaffa106.ctex"
+uid="uid://dwi4sw1ctvyr8"
+path="res://.godot/imported/Roca.png-5acfe7fbbf51ba62c447ac40a6e2b394.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/aventuras_de_un_capa/1_stealth/stealth_components/story_quest_contradi_guard_enemy_idle.png"
-dest_files=["res://.godot/imported/story_quest_contradi_guard_enemy_idle.png-e3498cef848dcc22630e565ebaffa106.ctex"]
+source_file="res://Roca.png"
+dest_files=["res://.godot/imported/Roca.png-5acfe7fbbf51ba62c447ac40a6e2b394.ctex"]
 
 [params]
 
