@@ -4,7 +4,16 @@
 ~ start
 do animation_player.play(&"walk_on")
 do animation_player.animation_finished
-dicen que es el narrador
+Aiko y Kuro juegan en el campo, el sol brilla.
+
+Aiko: ¡Vamos, Kuro! ¡Atrapa la pelota!
+Kuro: Guau, guau!
+Aiko: (riendo) ¡Eso es, buen chico!
+
+(De repente, Kuro corre hacia el bosque.)
+Aiko: ¿Kuro? ¡Espera, no vayas tan lejos!
+
+(Silencio, el viento sopla entre los árboles.)
+Aiko: Oh no… Kuro desapareció. Tengo que encontrarlo antes de que anochezca.
 do animation_player.play(&"walk_off")
-que esxplore dice Explore other elements to mod, like the placeholder image, tile map, and animation options for this scene!
 => END

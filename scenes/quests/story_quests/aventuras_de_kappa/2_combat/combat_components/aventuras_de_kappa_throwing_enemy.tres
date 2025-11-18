@@ -1,7 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=25 format=3 uid="uid://cwas3t53nvcra"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bp1rb"]
-load_path = "res://.godot/imported/aventuras_de_un_kapp_throwing_enemy_attack.png-e7f4c1e7ecbd91c4e1137bbf3d089594.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mind4"]
 atlas = SubResource("CompressedTexture2D_bp1rb")
@@ -28,7 +27,6 @@ atlas = SubResource("CompressedTexture2D_bp1rb")
 region = Rect2(192, 0, 192, 192)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x0r6k"]
-load_path = "res://.godot/imported/aventuras_de_un_kapp_throwing_enemy_defeated.png-659fa8b715dafb19e842ffc4599c3bde.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_websu"]
 atlas = SubResource("CompressedTexture2D_x0r6k")
@@ -47,7 +45,6 @@ atlas = SubResource("CompressedTexture2D_x0r6k")
 region = Rect2(576, 0, 192, 192)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6k8ot"]
-load_path = "res://.godot/imported/aventuras_de_un_kapp_throwing_enemy_idle.png-ef551156b759ea5eef883a18b54859f4.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wocwu"]
 atlas = SubResource("CompressedTexture2D_6k8ot")
@@ -66,7 +63,6 @@ atlas = SubResource("CompressedTexture2D_6k8ot")
 region = Rect2(192, 0, 192, 192)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2kipy"]
-load_path = "res://.godot/imported/aventuras_de_un_kapp_throwing_enemy_walk.png-c3f92aee187dea5cdd4662b909614c0e.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wt8op"]
 atlas = SubResource("CompressedTexture2D_2kipy")

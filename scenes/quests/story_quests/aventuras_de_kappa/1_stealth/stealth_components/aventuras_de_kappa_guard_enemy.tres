@@ -1,79 +1,77 @@
-[gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://baurco5ke24qp"]
+[gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://dv1ekyfvkdnna"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m8ont"]
-load_path = "res://.godot/imported/aventuras_de_un_kapp_guard_enemy_alerted.png-94a466285700d9c8fecbd9cee717a4b7.ctex"
+[ext_resource type="Texture2D" uid="uid://dysjlydvgylvy" path="res://scenes/quests/story_quests/aventuras_de_kappa/1_stealth/stealth_components/aventuras_de_kappa_guard_enemy_alerted.png" id="1_gbs0a"]
+[ext_resource type="Texture2D" uid="uid://dnu2iq7owkd53" path="res://scenes/quests/story_quests/aventuras_de_kappa/1_stealth/stealth_components/aventuras_de_kappa_guard_enemy_idle.png" id="2_i2h2c"]
+[ext_resource type="Texture2D" uid="uid://bn0gfho2cntn1" path="res://scenes/quests/story_quests/aventuras_de_kappa/1_stealth/stealth_components/aventuras_de_kappa_guard_enemy_walk.png" id="3_5q1vh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7yuat"]
-atlas = SubResource("CompressedTexture2D_m8ont")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylgmy"]
+atlas = ExtResource("1_gbs0a")
 region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jl6rj"]
-atlas = SubResource("CompressedTexture2D_m8ont")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c24x"]
+atlas = ExtResource("1_gbs0a")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7rm1"]
+atlas = ExtResource("1_gbs0a")
 region = Rect2(384, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xwccc"]
-atlas = SubResource("CompressedTexture2D_m8ont")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ng1r"]
+atlas = ExtResource("1_gbs0a")
 region = Rect2(576, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_le63u"]
-atlas = SubResource("CompressedTexture2D_m8ont")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoh10"]
+atlas = ExtResource("1_gbs0a")
 region = Rect2(768, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r2l1b"]
-atlas = SubResource("CompressedTexture2D_m8ont")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy1cc"]
+atlas = ExtResource("1_gbs0a")
 region = Rect2(960, 0, 192, 192)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qik4f"]
-load_path = "res://.godot/imported/aventuras_de_un_kapp_guard_enemy_idle.png-f8cad52179643fc8ca9a96a173228e82.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rn2a8"]
-atlas = SubResource("CompressedTexture2D_qik4f")
+[sub_resource type="AtlasTexture" id="AtlasTexture_my7ne"]
+atlas = ExtResource("2_i2h2c")
 region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dhpc8"]
-atlas = SubResource("CompressedTexture2D_qik4f")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofbyk"]
+atlas = ExtResource("2_i2h2c")
 region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xpsa5"]
-atlas = SubResource("CompressedTexture2D_qik4f")
+[sub_resource type="AtlasTexture" id="AtlasTexture_seakf"]
+atlas = ExtResource("2_i2h2c")
 region = Rect2(384, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ty311"]
-atlas = SubResource("CompressedTexture2D_qik4f")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3tucy"]
-load_path = "res://.godot/imported/aventuras_de_un_kapp_guard_enemy_walk.png-8b0bbe23a4c09bf2372a0026e50a6d11.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_15ngm"]
-atlas = SubResource("CompressedTexture2D_3tucy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_a07hd"]
+atlas = ExtResource("3_5q1vh")
 region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vxxya"]
-atlas = SubResource("CompressedTexture2D_3tucy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi2xo"]
+atlas = ExtResource("3_5q1vh")
 region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s662v"]
-atlas = SubResource("CompressedTexture2D_3tucy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydg8x"]
+atlas = ExtResource("3_5q1vh")
 region = Rect2(384, 0, 192, 192)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7yuat")
+"texture": SubResource("AtlasTexture_ylgmy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jl6rj")
+"texture": SubResource("AtlasTexture_4c24x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xwccc")
+"texture": SubResource("AtlasTexture_d7rm1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_le63u")
+"texture": SubResource("AtlasTexture_1ng1r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r2l1b")
+"texture": SubResource("AtlasTexture_xoh10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy1cc")
 }],
 "loop": true,
 "name": &"alerted",
@@ -81,28 +79,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rn2a8")
+"texture": SubResource("AtlasTexture_my7ne")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rn2a8")
+"texture": SubResource("AtlasTexture_ofbyk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rn2a8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dhpc8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xpsa5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xpsa5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xpsa5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ty311")
+"texture": SubResource("AtlasTexture_seakf")
 }],
 "loop": true,
 "name": &"idle",
@@ -110,22 +93,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_15ngm")
+"texture": SubResource("AtlasTexture_a07hd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vxxya")
+"texture": SubResource("AtlasTexture_oi2xo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s662v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_15ngm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vxxya")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s662v")
+"texture": SubResource("AtlasTexture_ydg8x")
 }],
 "loop": true,
 "name": &"walk",

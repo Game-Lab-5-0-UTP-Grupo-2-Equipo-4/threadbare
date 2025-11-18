@@ -1,11 +1,84 @@
-[gd_scene load_steps=11 format=4 uid="uid://dwwivnsn2g4ir"]
+[gd_scene load_steps=22 format=4 uid="uid://dwwivnsn2g4ir"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_3rhma"]
 [ext_resource type="Texture2D" uid="uid://dngx61381pspl" path="res://scenes/quests/story_quests/aventuras_de_kappa/0_intro/intro_components/aventuras_de_kappa_intro_image.png" id="2_g3b1n"]
 [ext_resource type="SpriteFrames" uid="uid://dld8o52ncd16g" path="res://scenes/quests/story_quests/aventuras_de_kappa/player_components/aventuras_de_kappa_player.tres" id="3_gtt0j"]
+[ext_resource type="Texture2D" uid="uid://c83s00bcehde7" path="res://scenes/quests/story_quests/aventuras_de_kappa/0_intro/intro_components/ADVENTURE KAPPA.png" id="4_iqqa3"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_vp06l"]
 [ext_resource type="Resource" uid="uid://cqgogrd8nfxgu" path="res://scenes/quests/story_quests/aventuras_de_kappa/0_intro/intro_components/aventuras_de_kappa_intro.dialogue" id="5_iqqa3"]
 [ext_resource type="PackedScene" uid="uid://v3usqiwy5wpr" path="res://scenes/game_elements/props/decoration/rock/rock.tscn" id="6_ow7uc"]
+[ext_resource type="Texture2D" uid="uid://dw58tdiyos0pj" path="res://scenes/quests/story_quests/aventuras_de_kappa/0_intro/intro_components/AIKO.jpg" id="7_gtt0j"]
+[ext_resource type="Texture2D" uid="uid://cqwfqjhl7mmsf" path="res://scenes/quests/story_quests/aventuras_de_kappa/0_intro/intro_components/Kuro.jpg" id="8_vp06l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iqqa3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_gtt0j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_g3b1n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 348)]
+}
+
+[sub_resource type="Animation" id="Animation_3rhma"]
+resource_name = "walk_one"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 348), Vector2(300, 348)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gtt0j"]
+_data = {
+&"RESET": SubResource("Animation_g3b1n"),
+&"walk_one": SubResource("Animation_3rhma")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ow7uc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_vp06l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_iqqa3"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_vp06l"]
+resource_name = "dog_run"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ow7uc"]
+_data = {
+&"RESET": SubResource("Animation_iqqa3"),
+&"dog_run": SubResource("Animation_vp06l")
+}
 
 [sub_resource type="Animation" id="Animation_jflt5"]
 length = 0.001
@@ -107,7 +180,7 @@ tile_set = ExtResource("1_3rhma")
 metadata/_edit_lock_ = true
 
 [node name="IntroImage" type="Sprite2D" parent="TileMapLayers"]
-position = Vector2(770, 227)
+position = Vector2(761.00006, 225.00002)
 scale = Vector2(0.802083, 0.802083)
 texture = ExtResource("2_g3b1n")
 
@@ -116,7 +189,7 @@ tile_map_data = PackedByteArray("AAAKAAEABgAAAAAAAAAKAAIABgADAAEAAAAKAAMABgADAAE
 tile_set = ExtResource("1_3rhma")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(153, 366)
+position = Vector2(194, 350)
 zoom = Vector2(1.333, 1.333)
 limit_left = 0
 limit_top = 0
@@ -133,6 +206,35 @@ position = Vector2(400, 349)
 sprite_frames = ExtResource("3_gtt0j")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.55358297
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="OnTheGround/Character"]
+position = Vector2(-328, -87)
+sprite_frames = SubResource("SpriteFrames_iqqa3")
+frame_progress = 0.8872018
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="OnTheGround/Character/AnimatedSprite2D"]
+root_node = NodePath("../../../../Aiko")
+libraries = {
+&"": SubResource("AnimationLibrary_gtt0j")
+}
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="OnTheGround/Character"]
+position = Vector2(-205.00002, 6.000001)
+scale = Vector2(0.19690247, 0.22124597)
+sprite_frames = SubResource("SpriteFrames_ow7uc")
+frame_progress = 0.0036493796
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround/Character/AnimatedSprite2D2"]
+root_node = NodePath("../../../../Kuro")
+libraries = {
+&"": SubResource("AnimationLibrary_ow7uc")
+}
+
+[node name="AdventureKappa" type="Sprite2D" parent="OnTheGround"]
+position = Vector2(767, 222.00002)
+scale = Vector2(0.16210935, 0.20751955)
+texture = ExtResource("4_iqqa3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround"]
 root_node = NodePath("../..")
@@ -151,3 +253,9 @@ metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="Rock" parent="." instance=ExtResource("6_ow7uc")]
 position = Vector2(125, 403)
+
+[node name="Aiko" type="Node2D" parent="."]
+position = Vector2(0, 348)
+
+[node name="Kuro" type="Node2D" parent="."]
+position = Vector2(300, 347)
