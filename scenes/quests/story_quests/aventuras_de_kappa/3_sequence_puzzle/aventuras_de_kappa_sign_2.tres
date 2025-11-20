@@ -1,7 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://du1ubsse2lj3f"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1kgjt"]
-load_path = "res://.godot/imported/aventuras_de_un_kapp_sign.png-853d5fa17022e3fa0c938939d9809436.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7cdm"]
 atlas = SubResource("CompressedTexture2D_1kgjt")

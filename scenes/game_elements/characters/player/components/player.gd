@@ -6,6 +6,13 @@ extends CharacterBody2D
 
 signal mode_changed(mode: Mode)
 
+
+
+
+
+
+
+
 ## Controls how the player can interact with the world around them.
 enum Mode {
 	## Player can explore the world, interact with items and NPCs, but is not
@@ -156,6 +163,7 @@ func _ready() -> void:
 	_set_mode(mode)
 	_set_sprite_frames(sprite_frames)
 
+	
 
 func _unhandled_input(_event: InputEvent) -> void:
 	var axis: Vector2 = Input.get_vector(&"move_left", &"move_right", &"move_up", &"move_down")
