@@ -4,16 +4,15 @@
 ~ start
 do animation_player.play(&"walk_on")
 do animation_player.animation_finished
-Aiko y Kuro juegan en el campo, el sol brilla.
+El dueño camina por el bosque, preocupado por su perro perdido.
 
-Aiko: ¡Vamos, Kuro! ¡Atrapa la pelota!
-Kuro: Guau, guau!
-Aiko: (riendo) ¡Eso es, buen chico!
+Dueño: ¡Kuro! ¿Dónde estás, amigo?
+Dueño: (agitado) ¡Vamos, responde!
 
-(De repente, Kuro corre hacia el bosque.)
-Aiko: ¿Kuro? ¡Espera, no vayas tan lejos!
+(Recuerda la última vez que lo vio, corriendo hacia una cueva oscura.)
+Dueño: Kuro… te vi entrar por aquí. ¿Por qué fuiste tan lejos?
 
-(Silencio, el viento sopla entre los árboles.)
-Aiko: Oh no… Kuro desapareció. Tengo que encontrarlo antes de que anochezca.
+(La entrada de la cueva está silenciosa y fría.)
+Dueño: No puedo dejarte ahí dentro solo. Tengo que encontrarte antes de que algo pase.
 do animation_player.play(&"walk_off")
 => END
